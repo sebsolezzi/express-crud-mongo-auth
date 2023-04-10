@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 // Modelo Usuario
-const usuarioSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     username: {
         type: String,
         require: true,
@@ -12,19 +12,19 @@ const usuarioSchema = new mongoose.Schema({
         require: true
     },
 });
-export const Usuario = mongoose.model('Usuario', usuarioSchema);
+export const User = mongoose.model('Users', userSchema);
 
 // Modelo tareas
-const tareaSchema = new mongoose.Schema({
-    titulo: {
+const taskSchema = new mongoose.Schema({
+    title: {
         type: String,
         require: true
     },
-    descripcion: {
+    description: {
         type: String,
         require: true
     },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'Usuario' },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'Users' },
 });
-export const Tarea = mongoose.model('Tarea', tareaSchema);
+export const Task = mongoose.model('Tasks', taskSchema);
 

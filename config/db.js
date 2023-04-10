@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export function conentarDB() {
+export function conectDB() {
     try {
         mongoose.connect(process.env.MONGODB_URL, { useNewUrlParser: true })
     } catch (error) {
