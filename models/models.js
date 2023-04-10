@@ -24,7 +24,7 @@ const tareaSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'Usuario' },
 });
 export const Tarea = mongoose.model('Tarea', tareaSchema);
 

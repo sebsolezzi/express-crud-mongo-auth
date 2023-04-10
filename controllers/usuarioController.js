@@ -26,7 +26,7 @@ export const crearUsuario = async (req, res) => {
 
     } catch (error) {
         console.log(error)
-        return res.status(404).send({ msg: 'Error al crear usuario', err: error })
+        res.status(500).json({ msg: "Problema en servidor" });
     }
 
 }
@@ -57,6 +57,7 @@ export const loginUsuario = async (req, res) => {
 
     } catch (error) {
         console.log(error)
+        res.status(500).json({ msg: "Problema en servidor" });
     }
 }
 
